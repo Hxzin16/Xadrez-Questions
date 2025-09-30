@@ -49,6 +49,7 @@
         </table>
       </div>
     </div>
+              
     <script>
       function insert(num) {
   // num diz que o que está vindo para a função é um número.
@@ -61,6 +62,15 @@
       // Onde ele pode ser colocado.
       return;
     }
+  }
+              
+  if (num === "."){
+
+      let partes = texto.split(/[\+\-\*\/]/); //divide o texto por operadores
+      let ultimoNumero = partes[partes.length - 1];
+  
+              if(ultimoNumero.includes('.')) 
+              return;
   }
 
   elemento.innerHTML = texto + num;
@@ -85,7 +95,9 @@ function calcular() {
   }
 }
     </script>
+              
   </body>
 </html>
+
 
 
